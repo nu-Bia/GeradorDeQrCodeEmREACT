@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(#121212,#121212 );
+}
+.title{
+  font-size: 85px;
+  color: #FFF;
+  animation: fliptitle 2s;
+}
+@keyframes fliptitle {
+  from {
+    transform: rotateX("90deg");
+  }
+  to{
+    transform: rotateX("0deg");
+
+  }
+  
+}
+.containerInput {
+  background-color: rgb(225, 92, 234);
+  padding: 15px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(230, 226, 226, 0.5);
+
+}
+.containerInput input{
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color:rgb(0, 0, 0);
+  outline: none;
+  margin-right: 8px;
+}
+.containerInput input::placeholder{
+  color:#f1f1f1;
+}
+.buttonSearch{
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer;
+  transition: transform 0.5s;
+}
+.buttonSearch:haver{
+  transform: scale(1.2);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(216, 0, 245);
+  width: 500px;
+  border-radius: 8px;
+
+}
+.main h2{
+ margin: 16px 0;
+ font-size: 39px;
+}
+
+.main span {
+  margin-bottom: 16px; 
+  font-weight: bold;
+}
+@media (max-width:620px){
+  .title{
+    font-size: 28px;
+  }
+  .main {
+    width: 80%;
+    min-height: 250px;;
+  }
+}
